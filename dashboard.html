@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TalentBridge internship placement dashboard shell.">
+  <title>TalentBridge — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page page--dashboard">
+  <a class="skip-link" href="#dashboard-content">Skip to main content</a>
+
+  <input class="sidebar-toggle-input" id="sidebar-toggle" type="checkbox">
+  <div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <a class="brand" href="landing.html" aria-label="TalentBridge home">
+          <span class="brand__mark" aria-hidden="true">T</span>
+          <span class="brand__name">TalentBridge</span>
+        </a>
+        <label class="sidebar__close" for="sidebar-toggle" aria-label="Close navigation">×</label>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Dashboard navigation">
+        <p class="nav-label">Workspace</p>
+        <a class="sidebar__link sidebar__link--active" href="#overview" aria-current="page"><span aria-hidden="true">▦</span>Overview</a>
+        <a class="sidebar__link" href="#applications"><span aria-hidden="true">□</span>Applications</a>
+        <a class="sidebar__link" href="#opportunities"><span aria-hidden="true">⌕</span>Opportunities</a>
+        <a class="sidebar__link" href="#candidates"><span aria-hidden="true">◎</span>Candidates</a>
+        <p class="nav-label nav-label--spaced">Manage</p>
+        <a class="sidebar__link" href="#messages"><span aria-hidden="true">□</span>Messages</a>
+        <a class="sidebar__link" href="#settings"><span aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+
+      <div class="sidebar__profile">
+        <div class="avatar avatar--small" aria-hidden="true">SA</div>
+        <div><strong>Syed Ahmed</strong><span>Administrator</span></div>
+        <button type="button" aria-label="Account options">•••</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" aria-hidden="true"></div>
+
+    <div class="dashboard-main">
+      <header class="topbar">
+        <label class="topbar__menu" for="sidebar-toggle" aria-label="Open navigation">☰</label>
+        <div class="breadcrumb"><span>Workspace</span><strong>/ Overview</strong></div>
+        <div class="topbar__actions">
+          <label class="search">
+            <span class="sr-only">Search dashboard</span>
+            <span aria-hidden="true">⌕</span>
+            <input type="search" placeholder="Search..." aria-label="Search dashboard">
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-button" type="button" aria-label="View notifications">♢<span class="notification-dot"></span></button>
+          <div class="topbar__user">
+            <div class="avatar avatar--small" aria-hidden="true">SA</div>
+            <span>Syed Ahmed</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-content" id="dashboard-content">
+        <section class="dashboard-heading" id="overview">
+          <div>
+            <p class="eyebrow">Monday, September 28, 2026</p>
+            <h1>Good evening, Syed.</h1>
+            <p>Here is what is happening across your internship workspace.</p>
+          </div>
+          <a class="button button--primary" href="#opportunities">+ Add opportunity</a>
+        </section>
+
+        <section class="stat-grid" aria-label="Workspace statistics">
+          <article class="stat-card">
+            <div class="stat-card__top"><span>Active opportunities</span><span class="stat-icon">↗</span></div>
+            <strong>128</strong>
+            <p><span class="trend trend--up">+12.5%</span> from last month</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card__top"><span>Applications</span><span class="stat-icon">□</span></div>
+            <strong>1,284</strong>
+            <p><span class="trend trend--up">+8.2%</span> from last month</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card__top"><span>Shortlisted</span><span class="stat-icon">✓</span></div>
+            <strong>342</strong>
+            <p><span class="trend trend--up">+5.4%</span> from last month</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card__top"><span>Placement rate</span><span class="stat-icon">%</span></div>
+            <strong>86.4%</strong>
+            <p><span class="trend trend--neutral">+1.8%</span> from last month</p>
+          </article>
+        </section>
+
+        <section class="dashboard-panels">
+          <article class="panel panel--chart">
+            <div class="panel__header">
+              <div><h2>Application activity</h2><p>Applications over the last 30 days</p></div>
+              <select aria-label="Application activity period"><option>Last 30 days</option><option>Last 90 days</option></select>
+            </div>
+            <div class="activity-chart" role="img" aria-label="Decorative bar chart showing increasing application activity">
+              <div class="chart-axis"><span>300</span><span>200</span><span>100</span><span>0</span></div>
+              <div class="chart-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="chart-labels"><span>Sep 1</span><span>Sep 8</span><span>Sep 15</span><span>Sep 22</span><span>Sep 28</span></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel__header"><div><h2>Placement pipeline</h2><p>Current application stages</p></div><a href="#applications">View all</a></div>
+            <div class="pipeline">
+              <div><span>Applied</span><strong>1,284</strong><div class="progress"><i style="width: 92%"></i></div></div>
+              <div><span>Review</span><strong>648</strong><div class="progress"><i style="width: 67%"></i></div></div>
+              <div><span>Interview</span><strong>214</strong><div class="progress"><i style="width: 42%"></i></div></div>
+              <div><span>Offer</span><strong>86</strong><div class="progress"><i style="width: 25%"></i></div></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel panel--table" id="applications">
+          <div class="panel__header">
+            <div><h2>Recent applications</h2><p>Latest activity from your workspace</p></div>
+            <a href="#applications">View all applications</a>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <caption class="sr-only">Recent internship applications</caption>
+              <thead>
+                <tr><th scope="col">Candidate</th><th scope="col">Position</th><th scope="col">Company</th><th scope="col">Applied</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+              </thead>
+              <tbody>
+                <tr><td><div class="candidate"><div class="avatar avatar--small avatar--alt1">AM</div><div><strong>Ali Mansoor</strong><span>ali@example.com</span></div></div></td><td>Frontend Intern</td><td>Northstar Labs</td><td>Sep 28, 2026</td><td><span class="status status--review">In review</span></td><td><button class="row-action" type="button" aria-label="More actions for Ali Mansoor">•••</button></td></tr>
+                <tr><td><div class="candidate"><div class="avatar avatar--small avatar--alt2">ZH</div><div><strong>Zara Hassan</strong><span>zara@example.com</span></div></div></td><td>Product Design Intern</td><td>Orbit Systems</td><td>Sep 27, 2026</td><td><span class="status status--interview">Interview</span></td><td><button class="row-action" type="button" aria-label="More actions for Zara Hassan">•••</button></td></tr>
+                <tr><td><div class="candidate"><div class="avatar avatar--small avatar--alt3">UA</div><div><strong>Usman Ali</strong><span>usman@example.com</span></div></div></td><td>Data Analyst Intern</td><td>Vertex Analytics</td><td>Sep 26, 2026</td><td><span class="status status--offer">Offer sent</span></td><td><button class="row-action" type="button" aria-label="More actions for Usman Ali">•••</button></td></tr>
+                <tr><td><div class="candidate"><div class="avatar avatar--small avatar--alt4">FK</div><div><strong>Fatima Khan</strong><span>fatima@example.com</span></div></div></td><td>Software Engineer Intern</td><td>Brightline</td><td>Sep 25, 2026</td><td><span class="status status--new">New</span></td><td><button class="row-action" type="button" aria-label="More actions for Fatima Khan">•••</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile dashboard navigation">
+    <a class="mobile-nav__link mobile-nav__link--active" href="#overview"><span aria-hidden="true">▦</span>Home</a>
+    <a class="mobile-nav__link" href="#applications"><span aria-hidden="true">□</span>Apps</a>
+    <a class="mobile-nav__link" href="#opportunities"><span aria-hidden="true">⌕</span>Search</a>
+    <a class="mobile-nav__link" href="#messages"><span aria-hidden="true">□</span>Messages</a>
+    <a class="mobile-nav__link" href="#settings"><span aria-hidden="true">⚙</span>Settings</a>
+  </nav>
+</body>
+</html>
