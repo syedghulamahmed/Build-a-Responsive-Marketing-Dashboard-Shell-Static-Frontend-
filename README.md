@@ -1,5 +1,10 @@
 # TalentBridge — Week 1
 
+## Integrated capstone
+
+This task is part of the broader [TalentBridge internship and placement platform](https://github.com/syedghulamahmed/Capstone), which consolidates the platform architecture and end-to-end workflow.
+
+
 Responsive marketing landing page and internal dashboard shell for the NeuroFive Solutions Full Stack Web Development internship task.
 
 ## Files
